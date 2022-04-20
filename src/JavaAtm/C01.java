@@ -5,7 +5,8 @@ public class C01 {
     //merhaba (emrah)
     //merhaba (yavuz)
     //merhabalar(eren)
-    // selamllaaaaarrrr
+    // selamllaaaaarrrrrrrrr
+    // 2. kez selamllaaaaarrrrrrrrr
 
 
 
