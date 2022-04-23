@@ -19,6 +19,46 @@ public class IslemMenusu {
         double paraCekmeTutari = 0;
         double yatirilanTutar = 0;
         String yanlisSecim = "";
+
+        switch (kartSecimi) {
+            case 1:
+                System.out.println("Lütfen transfer etmek istediğiniz tutarı giriniz");
+                Scanner scan1 = new Scanner(System.in);
+                gonderilenTutar = scan1.nextDouble();
+
+                break;
+            case 2:
+                System.out.println("Lütfen çekmek istediğiniz tutarı giriniz");
+                Scanner scan2 = new Scanner(System.in);
+                paraCekmeTutari = scan2.nextDouble();
+
+                break;
+            case 3:
+                System.out.println("Lütfen yatırmak istediğiniz tutarı giriniz");
+                Scanner scan3 = new Scanner(System.in);
+                yatirilanTutar = scan3.nextDouble();
+
+                break;
+            case 4:
+
+                break;
+            case 5:
+                System.out.println("Tesekkurler yine bekleriz");
+                break;
+            default:
+                System.out.println("Hatali giris");
+                System.out.println("Tekrar denemek ister misiniz? \nE/H?");
+                Scanner scan4 = new Scanner(System.in);
+                yanlisSecim = scan4.next();
+                if (yanlisSecim.equalsIgnoreCase("E")) {
+                    menuSecimi();
+                } else if (yanlisSecim.equalsIgnoreCase("H")) {
+                    System.out.println("Iyi gunler...");
+                } else {
+                    System.out.println("Yanlis secim");
+                    System.out.println("Iyi gunler");
+                }
+        }
     }
 }
 
