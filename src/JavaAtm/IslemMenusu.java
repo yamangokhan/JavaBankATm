@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class IslemMenusu {
     static String dogruSifre = "0000";
     static String dogruKartNo = "TR1122334455667788";
-    static double hesapBakiyesi = 955000;
+    static double hesapBakiyesi = 999000;
     static double miktar;
     static int kartSecimi;
 
