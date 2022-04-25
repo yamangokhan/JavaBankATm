@@ -120,13 +120,13 @@ public class IslemMenusu {
 
 
     public static void bakiyeSorgulama(double hesapBakiyesi) {
-        System.out.println("Guncel bakiyeniz : " + hesapBakiyesi);
+        System.out.println("Guncel bakiyeniz : " + IslemMenusu.hesapBakiyesi);
     }
 
     public static void paraYatırma(double yatirilanTutar, double hesapBakiyesi) {
         if (yatirilanTutar >= 0) {
-            hesapBakiyesi += yatirilanTutar;
-            System.out.println("Guncel Bakıyeniz : " + hesapBakiyesi);
+            IslemMenusu.hesapBakiyesi += yatirilanTutar;
+            System.out.println("Guncel Bakıyeniz : " + IslemMenusu.hesapBakiyesi);
         } else System.out.println("Lutfn geverli bir tutar giriniz");
 
     }
@@ -134,8 +134,8 @@ public class IslemMenusu {
     public static void paracekme(double paraCekmeTutari, double hesapBakiyesi) {
 
         if (paraCekmeTutari <= hesapBakiyesi) {
-            hesapBakiyesi -= paraCekmeTutari;
-            System.out.println("Guncel Bakiyeniz : " + hesapBakiyesi);
+            IslemMenusu.hesapBakiyesi -= paraCekmeTutari;
+            System.out.println("Guncel Bakiyeniz : " + IslemMenusu.hesapBakiyesi);
 
         } else {
             System.out.println("Yeterli bakiyeniz mevcut degıldır");
@@ -165,15 +165,14 @@ public class IslemMenusu {
 
     public static void paraGonder(double hesapBakiyesi, double gonderilenTutar) {
 
-        System.out.println("Guncel bakiyeniz : " + hesapBakiyesi);
         if (gonderilenTutar <= hesapBakiyesi) { // gonderilen miktar hesap bakiyesinden kucuk olursa calıssın
             System.out.println("Gondermek ıstedginiz 26 haneli IBAN Numarasını yazınız");
             Scanner scan = new Scanner(System.in);
             Iban = scan.next();
             if (Iban.length() == 26 && Iban.toUpperCase().startsWith("TR")) {
                 System.out.println(gonderilenTutar + " $ " + Iban + " nolu ibana basariyla gonderildi");
-                hesapBakiyesi -= gonderilenTutar;
-                System.out.println("Guncel bakiyeniz : " + hesapBakiyesi);
+                IslemMenusu.hesapBakiyesi -= gonderilenTutar;
+                System.out.println("Guncel bakiyeniz : " + IslemMenusu.hesapBakiyesi);
             } else {
                 System.out.println("Yanlıs bır IBAN Numarası girdiniz");
             }
