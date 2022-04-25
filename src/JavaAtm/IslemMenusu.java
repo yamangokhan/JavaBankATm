@@ -111,7 +111,7 @@ public class IslemMenusu {
         if (girilenSıfre.equals(dogruSifre) && girilenKartNo.equals(dogruKartNo)) {
             System.out.println("Lutfen yeni sıfrenızı giriniz");
 
-            dogruSifre = scan.next().replaceAll(" ", ""); // sifredeki tum boslukları hıclıge cevirerek yok ettık.
+            IslemMenusu.dogruSifre = scan.next().replaceAll(" ", ""); // sifredeki tum boslukları hıclıge cevirerek yok ettık.
             System.out.println("Sıfrenız " + dogruSifre + " olarak guncellenmiştir");
         } else {
             System.out.println("Yanlıs gırıs yaptınız, lutfen bilgilerinizi kontrol ediniz");
